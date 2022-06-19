@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;700&family=Arvo:ital,wght@0,400;0,700;1,700&family=Josefin+Sans:ital,wght@0,300;1,200;1,600&family=Kanit:wght@200;400;700&family=Oswald:wght@700&family=Source+Code+Pro:ital,wght@0,300;0,400;1,900&family=Source+Sans+Pro:ital,wght@0,300;0,900;1,200&family=Updock&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C4C4C4;
+}
+
+.section {
+    padding: 20px;
+    background-color: #e6e6e6;
+}
+
+.section2 {
+    padding: 20px;
+}
+
+.block {
+    display: block;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700; /* степень их черноты или толщину штрифта */
+    font-size: 64px; 
+    line-height: 85px; 
+    /* блочное измерение области текстового содержимого встроенного блока */
+    text-align: center;
+    line-height: 200px;
+    height: 200px;
+}
+
+.pink {
+    background-color: #FC8F8F;
+    width: 200px;
+}
+
+.grey {
+    background-color: #e6e6e6;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.margin-left  {
+    margin-left: 20px;
+}
+
+.margin-right  {
+    margin-right: 20px;
+}
+
+.margin-top {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    line-height: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 100px;
+}
+
+.cection-position {
+    position: relative;
+}
+
+.сol-r {
+    right: 380px;
+}
+
+.col-r3 {
+    right: 260px;
+}
+
+.col-r4 {
+    right: 140px;
+}
+
+.position {
+    position: absolute
+}
