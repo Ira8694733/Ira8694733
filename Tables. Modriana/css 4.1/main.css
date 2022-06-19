@@ -1,0 +1,35 @@
+table {
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 0px;
+    border: 2px black solid;
+
+}
+
+td {
+    border: 2px black solid; /* стиль внешней рамки */
+    width: 20px;
+    height: 20px;
+}
+
+.hight-col2 {
+  height: 40px; 
+}
+
+.hight-col3 {
+  width: 40px; 
+}
+
+.background-black {
+  background-color: #000;
+}
+.background-yellow {
+  background-color: yellow;
+}
+.background-red {
+  background-color: red;
+}
+.background-blue {
+  background-color: blue;
+}
