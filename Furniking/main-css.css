@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;700&family=Arvo:ital,wght@0,400;0,700;1,700&family=Josefin+Sans:ital,wght@0,300;1,200;1,600&family=Kanit:wght@200;400;700&family=Mulish:wght@400;600;700&family=Nunito+Sans:wght@200;400;700&family=Oswald:wght@700&family=Roboto:ital,wght@0,100;0,400;1,700&family=Source+Code+Pro:ital,wght@0,300;0,400;1,900&family=Source+Sans+Pro:ital,wght@0,300;0,900;1,200&family=Updock&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;700&family=Arvo:ital,wght@0,400;0,700;1,700&family=Josefin+Sans:ital,wght@0,300;1,200;1,600&family=Kanit:wght@200;400;700&family=Mulish:wght@400;600;700&family=Nunito+Sans:wght@200;400;700&family=Oswald:wght@700&family=Roboto:ital,wght@0,100;0,400;1,700&family=Rubik:wght@700&family=Source+Code+Pro:ital,wght@0,300;0,400;1,900&family=Source+Sans+Pro:ital,wght@0,300;0,900;1,200&family=Updock&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height:100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+a {
+    text-decoration: none; 
+}
+
+
+.container {
+    max-width: 1172.96px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.section_main {
+    margin-top: 100px;
+}
+
+.section_main_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid_wrapper_main {
+    display: grid;
+    grid-template-columns: 669px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:10px;
+}
+
+.grid_card {
+    position: relative;
+}
+
+.grid_card_one {
+    grid-row: span 2;
+    position: relative;
+}
+.grid_card_info {
+    padding: 63px 337px 361px 31px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.grid_card_text span {   
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.grid_card_info {
+    padding: 52px 211.91px 98px 24.04px;
+
+}
+.grid_card_title {
+    font-family: Mulish;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #555555;
+}
+
+.grid_card_text {
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #7AC751;
+    margin-top: 8px
+}
+
+.grid_card_link {
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+    margin-top: 8px;  
+}
+
+.grid_card_link:after {
+    content: url("./img/main/Vector.png");
+    margin-left: 2.96px;
+}
+
+.section_trending{
+    margin-top: 120px;
+}
+
+.card_title {
+    text-align: center;
+    font-family: Mulish;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+    color: #555555; 
+    margin-bottom: 45px; 
+}
+
+.trending_card_link {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 73px;
+}
+
+.trending_link {
+    font-family: Mulish;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+    transition: opacity .3s ease-in-out;
+}
+
+.trending_link:hover {
+    color: #7AC751;
+    transition: opacity .3s ease-in-out;
+}
+
+.trending_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap:1px;
+    row-gap: 1px;
+    margin-bottom: 53px;
+}
+
+.trending_card {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending_card:hover .card_like {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+
+.trending_card_img {
+    height: 287.82px;
+    position: relative;
+}
+
+.trending_img {
+    display: block;
+    z-index: -1;
+    max-width: 100%;
+}
+
+.card_lable {
+    padding: 2.5px 9px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;   
+    text-align: center;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;  
+    max-width: 44.68px;
+    border-radius: 0px 0px 5px 0px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.card_lable_blue {
+    background: #00B7F1;
+}
+
+.card_lable_green {
+    background: #7AC751; 
+}
+
+.discont {
+    max-width: 64px;
+    border-radius: 0px 0px 0px 5px; 
+    right: 2%;
+    top: 0;
+}
+
+.trending_card_info {
+    max-width: 269px;
+    margin-top: 15.18px;
+}
+
+.trending_card_info_title {
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.008em;
+    text-align: left;
+    color: #757575B5; 
+}
+
+.trending_card_info_text {
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    color: #555555;
+    margin-top: 9px;
+}
+
+.trending_card_price {
+    display: inline-flex;
+    justify-content: space-between; 
+    max-width: 269px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    margin-bottom: 45.97px;
+}
+.trending_price {
+    display: inline-flex;
+    gap: 7px;
+}
+
+.price {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;  
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #7AC751; 
+}
+
+.price_sale {
+    font-weight: 600;
+    text-decoration-line: line-through;
+    color: #CCCCCC;
+}
+
+.card_like {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    top: 40%;
+    right: 10%;  
+}
+
+.like_item:hover {
+   background-color: #FFFFFF;
+}
+
+.like_item{
+    display: flex;
+    width: 38.85px;
+    height: 38.89px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 33px rgba(0, 0, 0, 0.09);     
+}
+
+.card_like >.like_item svg:nth-child(-n+4){
+    position: absolute;
+    margin: 0.6em;
+} 
+
+.card_like:hover {
+    position: absolute;
+}
+
+.ratings {
+    display: inline-flex;
+    gap: 3.58px;
+}
+
+.star {
+    stroke:#CCCCCC;
+}
+
+.star_five >.star:nth-child(-n+5){
+    stroke: #7AC751;
+}
+
+.star_four >.star:nth-child(-n+4){
+    stroke: #7AC751;
+}
+
+.star_ziro >.star:nth-child(-n+5){
+    stroke: white;
+}
+
+.trending_spin {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
+
+.section_special {
+    margin-top: 99px;
+}
+
+.section_wrapper {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+
+.special_card_img {
+    position: relative;
+    display: grid;
+}
+
+.special_img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.special_card_info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    max-width: 227px;
+}
+
+.special_card_title {
+    font-family: Mulish;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #555555;  
+    margin-bottom: 9px; 
+}
+
+.special_card_text {
+    font-family: Mulish;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+    margin-bottom: 20px;  
+}
+
+.special_card_price {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 29px;
+}
+
+.special_buttom {
+    padding: 7px 10px 6px;
+    background: #7AC751;
+    border-radius: 2px;
+}
+.special_buttom_link {
+    font-family: Mulish;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.special_card_promotion {
+    display: inline-flex;
+    gap: 18px;
+    justify-content: start;
+}
+
+.promotion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    width: 40px;
+    height: 40px;
+    left: 276px;
+    top: 2965px;
+    background: #7AC751;
+    border-radius: 20px 20px 20px 20px; 
+}
+
+.number {
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;  
+}
+
+.time {
+    font-family: Rubik;
+    font-size: 6px;
+    font-weight: 400;
+    line-height: 7px;
+    letter-spacing: 0.005em;
+    text-align: center;
+    color: #FFFFFF;
+}
