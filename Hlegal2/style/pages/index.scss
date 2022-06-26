@@ -1,0 +1,687 @@
+@use '../sections/base.scss';
+@use '../sections/container.scss';
+@use '../sections/header.scss';
+@use '../sections/footer.scss';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$font-family: 'Montserrat';
+$color--grey-separator: #E6E6F0;
+$color--grey-bg:#F5F5FA;
+$color--main:#323264;
+$color--grey-text: #B3B3BA;
+$color--main-alt:#46466E;
+$color-background: #FFFFFF; 
+$color--grey-text: #B3B3BA;
+$color--grey-bgalt: #EDEDF7;
+$color--grey-separator: #E6E6F0;
+$color--activ-regular:#24A3FF;
+$color--accent: #F0145A;
+$color--company-hillel: #1C4280;
+$color--company-wanna: #143646;
+$color--company-tap:#F48B30;
+$color--company-look:#9E4DC3;
+$color--company-orange:#FD9339;
+$color--compamy-adtelligent: #E2E2E4;
+$color--compamy-clikky: #C71C36;
+$color--company-eco:#DCF3F9;
+$color--company-ingratek: #EAEAEA;
+$color--company-city: #282240;
+$color--company-artprint: #1D4568; 
+$color--gradient-red: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
+$color--gradient-supersoft: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$color--gradient-redtext: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+$color--basic: #000000;
+$color--boxShadow1:#CACADB;
+$color--boxShadow2:#E7E7F2;
+
+@mixin fontFamily-bold ($font-family, $font-style, $font-weight, $font-size, $line-height, $color) { 
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height:$line-height;
+    color: $color;
+}
+
+@mixin fontFamily-regular ($font-family, $font-style, $font-weight, $font-size, $line-height, $color) { 
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height:$line-height;
+    color: $color;
+}
+
+@mixin SpaceBetween {
+    display: flex;
+    justify-content: space-between;    
+}
+
+@mixin FlexColunm {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage {
+    position: relative;
+    background: $color--gradient-supersoft;
+    background: -webkit-linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
+    z-index: -2;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+}
+
+.boxShadow1 {
+    background: $color--boxShadow1;
+    border-radius: 0px 0px 12px 12px; 
+    height: 10px;
+    max-width: 1360px;
+    margin: 0 20px;
+}
+
+.boxShadow2 {
+    background: $color--boxShadow2;
+    border-radius: 0px 0px 12px 12px; 
+    height: 10px;
+    max-width: 1360px;
+    margin: 0 40px;
+}
+
+.legal__wrapper {
+    position: relative;
+}
+
+
+.legal-img {
+    position: relative;
+    width: 60%;
+    left: calc(50% - 697px/2 + 0.5px);
+    z-index: -1;
+    margin-top: -15%;
+}
+
+.legal-title {
+    position: absolute;
+    left: 30%;
+    bottom: 60%;
+    @include fontFamily-bold($font-family, normal, 700, 38px, 46x, $color-background);
+}
+
+.legal-svg {
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+    opacity: 0.5;
+    stroke:$color-background; 
+}
+
+.consistent {
+    padding: 60px 0;
+}
+.consistent__wrapper {
+    display: flex;
+    /*justify-content: center;*/
+    align-self: stretch;
+    gap: 60px;
+}
+
+.consistent__card {
+    @include FlexColunm;
+    justify-content: center;
+    gap: 30px;
+    max-width: 531px;
+
+    &-title {
+        @include fontFamily-bold($font-family, normal, 700, 30px, 37px, $color-background);
+        align-self: stretch;
+    }
+
+    &-text {
+        @include fontFamily-regular($font-family, normal, 400, 19px, 32px, $color-background);
+        width: 100%
+    }
+}
+
+.consistent__card-left {
+    @include FlexColunm;
+    align-items: flex-end;
+    gap: 30px;
+    padding-right: 50px;
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.title-red {
+    @include fontFamily-bold($font-family, normal, 700, 38px, 46px, $color--gradient-redtext);
+    background-clip: text;
+    text-emphasis-color: transparent;
+    background: -webkit-linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-white {
+   @include fontFamily-bold($font-family, normal, 700, 38px, 46px, $color-background);
+
+    &:hover {
+    @include fontFamily-bold($font-family, normal, 700, 38px, 46px, $color--gradient-redtext);
+    background-clip: text;
+    text-emphasis-color: transparent;
+    background: -webkit-linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   }
+}
+
+.service__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: repeat(2, 1fr); 
+    column-gap: 60px;
+    row-gap: 60px;   
+}
+
+.service__card {
+    @include FlexColunm;
+    gap: 30px;
+
+    &-info {
+    @include FlexColunm;
+    align-self: stretch;
+    flex-grow: 0;
+    gap: 15px;  
+    }
+
+    &-title {
+    @include fontFamily-bold($font-family, normal, 700, 22px, 27px, $color--activ-regular);
+    }
+
+    &-text {
+    @include fontFamily-regular($font-family, normal, 400, 16px, 26px, $color-background)    
+    }
+    
+}
+.service__card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 92px;
+    background-color: $color-background;
+    border-radius: 24px;
+}
+
+.service__item {
+    @include FlexColunm;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.team {
+    padding: 60px 0 ;
+    background-color: $color-background;
+}
+
+.team__wrapper {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 30px;
+}
+
+.team__card-img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.team__card-left {
+    max-width: 400px;
+}
+
+.team__card-right {
+    @include FlexColunm;
+    justify-content: center;
+    gap: 30px;
+    background-color: $color--grey-bgalt;
+    max-width: 860px;
+    padding: 30px 0 30px 30px;
+    border-radius: 0px 12px 12px 0px;
+
+       
+.team__card-name {
+    @include fontFamily-bold($font-family, normal, 700, 16px, 20px, $color--grey-text);
+}
+
+.team__card-position {
+    @include fontFamily-regular($font-family, normal, 400, 14px, 24px, $color--grey-text);
+}
+}
+
+.team__card-up {
+    @include FlexColunm;
+    gap: 5px;
+}
+
+.team__card-low {
+    @include FlexColunm;
+    gap: 6px;
+}
+
+.compamy__item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+
+    &-text {
+    @include fontFamily-bold($font-family, normal, 700, 14px,17px, $color--main);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+}
+
+.company__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-template-rows: repeat(3, 1fr);
+}
+.company__card {
+    display: flex;
+    align-items: center;
+    padding: 24px 89px;
+    max-width: 360px;
+    max-height: 120px;
+}
+
+.company__card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.color-blue {
+    background-color:$color--company-hillel;
+}
+
+.color-wanna {
+    background-color: $color--company-wanna;
+}
+
+.color-tap {
+    background-color: $color--company-tap;
+}
+
+.color-look {
+    background-color: $color--company-look;
+}
+
+.color-orange {
+    background-color: $color--company-orange;
+}
+
+.color-adtelligent {
+    background-color: $color--compamy-adtelligent;
+}
+
+.color-clikky {
+    background-color: $color--compamy-clikky;
+}
+
+.color-eco {
+    background-color: $color--company-eco;
+}
+
+.color-ingratek {
+    background-color: $color--company-ingratek;
+}
+
+.color-city {
+    background-color: $color--company-city;
+}
+
+.color-artprint {
+    background-color: $color--company-artprint;
+}
+
+.color-ultimatecard {
+    background-color: $color--basic;
+
+}
+.publication {
+    background-color: $color--grey-bg;
+    padding: 30px 0;
+}
+
+.publication__item {
+    @include FlexColunm;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.publication__wrapper {
+    display: flex;
+    gap: 30px;
+    /*display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;*/
+}
+
+.publication-img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.publication__card {
+    width: 420px;
+    background-color: $color-background;
+    border-radius: 8px 8px 0px 0px;
+    flex-grow: 1;
+
+    &-img {
+        margin-bottom: 15px;
+    }
+}
+
+.publication__info {
+    @include FlexColunm;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 30px;
+
+    &-title {
+        @include fontFamily-bold($font-family, normal, 700, 16px,20px, $color--activ-regular);
+    }
+
+    &-bold {
+        @include fontFamily-bold($font-family, normal, 700, 12px,15px, $color--grey-text);
+    }
+
+    &-text {
+        display: block;
+        @include fontFamily-regular($font-family, normal, 400, 14px, 22px, $color--basic);
+        border-top: 4px solid $color--grey-separator;
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .boxShadow1 {
+        max-width: 1880px;
+    }
+    
+    .boxShadow2 {
+        max-width: 1840px;
+    }
+        
+    /*.consistent__card {
+        gap: 30px;
+        width: 100%;
+    } */ 
+    
+   
+    .team__card-right {
+        max-width: 1200px;
+    }
+    
+    .compamy__item {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    
+    
+        &-text {
+        @include fontFamily-bold($font-family, normal, 700, 14px,17px, $color--main);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    }
+    
+    /*.company__wrapper {
+        max-width: 1720px;
+        border-radius: 12px;
+        margin: 0 100px 
+    }*/
+
+    .company__card {
+       max-width: 430px;
+    }
+    
+    .company__card-img {
+        width: 80%;
+    }
+}
+    
+
+@media screen and (max-width: 1024px) {
+   
+    .legal-img {
+        left: 19%;
+        margin-top: -20%;
+    }
+      
+    .legal-svg {
+        left: 48%;
+    }
+
+    .consistent__wrapper {
+        gap: 30px;
+    }
+    
+    .consistent__card {
+        gap: 30px;
+        max-width: 390px;
+    }
+    
+    .consistent__card-left {
+        padding-right: 20px;
+    }   
+       
+    .company__card {
+        padding: 22px 19px;
+    }  
+}
+
+@media  (max-width: 768px) {  
+    .legal-img {
+        width: 100%;
+        left: calc(50% - 893.28px/2 - 0.36px);
+        margin-top: -256px;
+    }
+        
+    .consistent {
+        padding: 60px 0;
+    }
+    .consistent__wrapper {
+        @include FlexColunm;
+    }
+    
+    .consistent__card {
+        width: 100%;
+        max-width: 648px;
+    }
+    
+    .consistent__card-left {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 30px;
+        padding-right: 0px;
+        width: 100%;
+        max-width: 760px;
+        border-right: none;
+        overflow: auto;
+        border-radius: none;
+        
+    }
+    
+    .service__wrapper {
+        grid-template-columns: repeat(2, 1fr);  
+        grid-template-rows: repeat(3, 1fr); 
+    }
+    
+    .team {
+        padding: 60px 0 ;
+        background-color: $color-background;
+    }
+    
+    .team__wrapper {
+        @include FlexColunm()
+
+    }
+    
+    .team__card-img {
+        border-radius: 12px 12px 0px 0px;
+    }
+    
+    .team__card-left {
+        width: 100%;
+        max-width: 648px;
+    }
+    
+    .team__card-right {
+        width: 100%;
+        max-width: 648px;
+        border-radius: 0px 0px 12px 12px;
+    }
+       
+    .company__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .company__card {
+        padding: 19px 22px;
+    }    
+    
+    .publication__wrapper {
+        flex-wrap: wrap;
+    }
+    
+    
+    .publication__card {
+        width: 100%;
+        max-width: 36vw;
+    
+        &-dark {
+            width: 100%;
+            max-width: 100vw;
+        }
+    }   
+}
+
+@media screen and (max-width: 575px) {
+    
+    .legal-img {
+    width: 150%;
+    left: -40%;
+    margin-top: -150px;;
+    }
+    
+   /* .legal-title {
+        position: absolute;
+        left: calc(50% - 600px/2);
+        bottom: 370px;
+        @include fontFamily-bold($font-family, normal, 700, 38px, 46x, $color-background);
+    }
+    
+    .legal-svg {
+        position: absolute;
+        left: calc(50% - 18px/2);
+        bottom: 26px;
+        opacity: 0.5;
+        stroke:$color-background; 
+    }*/
+    
+    .consistent {
+        padding: 60px 0;
+    }
+    .consistent__wrapper {
+        @include FlexColunm;
+    }
+    
+    .consistent__card {
+        width: 100%;
+        max-width: 315px;
+    }
+    
+    .consistent__card-left {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 30px;
+        padding-right: 0px;
+        width: 100%;
+        max-width: 300px;
+        border-right: none;
+        overflow: auto;
+        border-radius: none; 
+        overflow-x: hidden;
+        
+    }
+    
+    .service__wrapper {
+        grid-template-columns: 1fr;  
+        grid-template-rows: repeat(6, 1fr); 
+        row-gap: 30px;
+    }
+    
+    .team {
+        padding: 30px 0 ;
+    }   
+   
+    .team__card-left {
+        max-width: 315px;
+    }
+    
+    .team__card-right {
+        max-width: 315px;
+    }
+       
+    .company__wrapper {
+        display: grid;
+        grid-template-columns:1fr;  
+        grid-template-rows: repeat(6, 1fr);
+    }
+    
+    .company__card {
+        padding: 19px 22px;
+    }    
+     
+    .color-clikky {
+        display: none;
+    }
+
+    .color-eco {
+        display: none;
+    }
+
+    .color-ingratek {
+        display: none;
+    }
+
+    .color-city {
+        display: none;
+    }
+
+    .color-artprint {
+        display: none;
+    }
+
+    .color-artprint {
+        display: none;
+    }
+
+    .color-ultimatecard {
+        display: none;
+    }  
+    
+    .publication__card {
+        width: 100%;
+        max-width: 100vw
+    }
+}
+
+
